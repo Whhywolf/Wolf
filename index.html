@@ -1,0 +1,93 @@
+<!-- Filename: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BDG GAME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">BDG GAME</div>
+    <div class="right-buttons">
+      <button class="btn">Download App</button>
+      <button class="btn">Customer Service</button>
+    </div>
+  </div>
+
+  <!-- Popup Bonus -->
+  <div id="popup" class="popup">
+    <div class="popup-inner">
+      <div class="popup-header">
+        <h2>Extra First Deposit Bonus</h2>
+        <p class="subtext">Each account can only receive rewards once</p>
+        <span class="close-btn" onclick="closePopup()">×</span>
+      </div>
+      <div class="bonus-list">
+        <div class="bonus-item">
+          <div class="bonus-title">First Deposit ₹200000 + ₹10,000</div>
+          <div class="bonus-desc">Deposit ₹200000 for the first time and receive ₹10000 bonus</div>
+          <div class="bar"><div class="progress" style="width:0%"></div></div>
+          <button class="deposit-btn">Deposit</button>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-title">First Deposit ₹100000 + ₹5,000</div>
+          <div class="bonus-desc">Deposit ₹100000 for the first time and receive ₹5000 bonus</div>
+          <div class="bar"><div class="progress" style="width:0%"></div></div>
+          <button class="deposit-btn">Deposit</button>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-title">First Deposit ₹30000 + ₹2000</div>
+          <div class="bonus-desc">Deposit ₹30000 for the first time and receive ₹2000 bonus</div>
+          <div class="bar"><div class="progress" style="width:0%"></div></div>
+          <button class="deposit-btn">Deposit</button>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-title">First Deposit ₹10000 + ₹600</div>
+          <div class="bonus-desc">Deposit ₹10000 for the first time and receive ₹600 bonus</div>
+          <div class="bar"><div class="progress" style="width:0%"></div></div>
+          <button class="deposit-btn">Deposit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Screen -->
+  <div id="home-content" style="display:none;">
+    <div class="game-grid">
+      <div class="game-icon">Lottery</div>
+      <div class="game-icon">Original</div>
+      <div class="game-icon">Slots</div>
+      <div class="game-icon">Sports</div>
+      <div class="game-icon">Popular</div>
+      <div class="game-icon">Casino</div>
+      <div class="game-icon">Fishing</div>
+    </div>
+
+    <div class="bottom-nav">
+      <div class="nav-item">Home</div>
+      <div class="nav-item">Activity</div>
+      <div class="nav-item">Promotion</div>
+      <div class="nav-item">Wallet</div>
+      <div class="nav-item">Account</div>
+    </div>
+  </div>
+
+<script>
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("home-content").style.display = "block";
+  }
+
+  window.onload = function() {
+    setTimeout(() => {
+      document.getElementById("popup").style.display = "flex";
+      document.getElementById("home-content").style.display = "none";
+    }, 1000);
+  };
+</script>
+</body>
+</html>
